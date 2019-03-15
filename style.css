@@ -1,3 +1,5 @@
+
+
 ul {
     list-style: none;
     margin: 0;
@@ -38,4 +40,68 @@ input {
 
 li:nth-child(odd){
     background-color: #fff0df;
+}
+
+
+/* 
+
+Navbar 
+
+*/
+.plansPriceBx:hover {
+    color:white;
+    background-color: #2e91fc;
+}
+
+.plansPriceBx:focus {
+    outline: none;
+}
+nav {
+    width: 100%;
+    font-size: 0;
+}
+a {
+    font-size: 16px;
+    padding: 10px 10px 10px 10px; 
+}
+
+
+
+nav > .navBorderBox:first-child > a:first-child{
+    margin-left: 30px; 
+}
+
+.plansPriceBx {
+    margin-right: 30px; 
+    margin-left:10px;
+}
+
+nav > .navBorderBox:last-child { 
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.navBorderBox {
+    width: 50%;
+    display: inline-block;
+    margin: 0;;
+}
+
+.plansPriceBx {
+    display: inline-block;
+    height: auto;
+    background-color: rgba(0,0,0,0);
+    border-radius: 5px;
+    color: #2e91fc;
+    border-color: #2e91fc;
+    font-size: 16px;
+}
+
+.navbars {
+    display: flex;
+    align-items: center;
+    margin-bottom:0;
+    min-height: 60px;
+    background-color: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
 }
