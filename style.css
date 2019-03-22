@@ -83,8 +83,9 @@ nav > .navBorderBox:last-child {
 
 .navBorderBox {
     width: 50%;
-    display: inline-block;
-    margin: 0;;
+    display: inline-flex;
+    margin: 0;
+    align-items: center;
 }
 
 .plansPriceBx {
@@ -104,4 +105,111 @@ nav > .navBorderBox:last-child {
     min-height: 60px;
     background-color: #fff;
     box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
+}
+
+#menu {
+    margin-right: 30px; 
+    display: none;
+    /* display: inline-block; */
+    height: auto;
+    background-color: rgba(0,0,0,0);
+    border-radius: 5px;;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* 
+.textOverlay {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;   
+    transition: 0.5s;
+} */
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .bar2 {
+      transition: 0.01s;
+  }
+
+  .bar3 {
+    margin: 6px 0 0;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-4px, -3px);
+    /* margin: 8px 0 0; */
+  }
+
+
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#textOverlay
+{
+      /* display: none; */
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left:100%;
+      top:0;
+      /* padding: 50px; */
+      /* padding-top: 125px; */
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* transform-origin: 0% 0%; */
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
+}
+
+.slide {
+    transform: translate(-100%, 0);
+}
+
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .plansPriceBx, nav > .navBorderBox:last-child > a, nav > .navBorderBox > a:last-child {
+        background-color: #2e91fc;
+        display: none;
+    }
+    #menu {
+        display: inline-block;
+    }
+    /* #menuToggle {
+        display: block;
+    } */
+
 }
