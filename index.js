@@ -20,11 +20,16 @@ function toggle(){
     menu.classList.toggle("change")
 
     let showMenu = document.getElementById("textOverlay")
-    showMenu.setAttribute("class", "slide")
     // debugger;
     // let getStyle = getComputedStyle(showMenu);
-    // if (getStyle.getPropertyValue("display")=== "none") {
-    //     showMenu.style.display = "block"
+    if (showMenu.classList.contains("slide")){
+        showMenu.classList.remove("slide")
+    }
+    else {
+        showMenu.classList.add("slide")
+    }
+    // if (getStyle.getPropertyValue("class")=== "slide") {
+    //     showMenu.removeAttribute("class", "slide")
     // }
     // else {
     //     showMenu.style.display = "none"

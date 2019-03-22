@@ -116,6 +116,8 @@ nav > .navBorderBox:last-child {
     border-radius: 5px;;
     font-size: 16px;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 /* 
 .textOverlay {
@@ -164,40 +166,28 @@ nav > .navBorderBox:last-child {
  */
 #textOverlay
 {
-      /* display: none; */
-      position: absolute;
+      position: fixed;
       width: 100%;
       height: 100%;
       left:100%;
       top:0;
-      /* padding: 50px; */
-      /* padding-top: 125px; */
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       background: #ededed;
       list-style-type: none;
       -webkit-font-smoothing: antialiased;
-      /* transform-origin: 0% 0%; */
-      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+      display: none;
 }
 
 .slide {
     transform: translate(-100%, 0);
 }
 
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
+.slide > a {
+    font-size: 3.5vmax;
 }
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
 
 
 @media only screen and (max-width: 768px) {
@@ -207,6 +197,9 @@ nav > .navBorderBox:last-child {
     }
     #menu {
         display: inline-block;
+    }
+    #textOverlay {
+        display: flex;
     }
     /* #menuToggle {
         display: block;
