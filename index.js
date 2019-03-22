@@ -12,8 +12,24 @@
 (function vanillaJs() {
     document.getElementById("submit").addEventListener("click", add)
     document.getElementById("clear").addEventListener("click", clear)
-
+    document.getElementById("menu").addEventListener('click', toggle)
 })()
+
+function toggle(){
+    let menu = document.getElementById("menu")
+    menu.classList.toggle("change")
+
+    let showMenu = document.getElementById("textOverlay")
+    showMenu.setAttribute("class", "slide")
+    // debugger;
+    // let getStyle = getComputedStyle(showMenu);
+    // if (getStyle.getPropertyValue("display")=== "none") {
+    //     showMenu.style.display = "block"
+    // }
+    // else {
+    //     showMenu.style.display = "none"
+    // }
+}
 
 function add() {
     event.preventDefault();
