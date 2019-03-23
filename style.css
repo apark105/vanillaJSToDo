@@ -179,13 +179,15 @@ nav > .navBorderBox:last-child {
       -webkit-font-smoothing: antialiased;
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
       display: none;
+      font-size: 3.5vmax;
 }
 
 .slide {
     transform: translate(-100%, 0);
+    font-size: 3.5vmax;
 }
 
-.slide > a {
+#textOverlay > a {
     font-size: 3.5vmax;
 }
 
